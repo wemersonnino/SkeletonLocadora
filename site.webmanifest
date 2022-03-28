@@ -1,0 +1,44 @@
+{
+  "short_name": "TemplateLocadora 2022",
+  "name": "TemplateLocadora",
+  "icons": [
+  {
+      "src": "img/icon/favicon.webp",
+      "sizes": "48x48",
+      "type": "image/webp"
+    },
+    {
+      "src": "img/icon/favicon.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/icon/favicon.ico",
+      "sizes": "72x72 96x96 128x128 256x256"
+    },
+    {
+      "src": "img/icon/hd_hi.svg",
+      "sizes": "72x72"
+    },
+    {
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa",
+  "description": "Template for Projeto Locadora para ajudar a alocar um carro",
+  "related_applications": [{
+      "platform": "web"
+    }, {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.TemplateLocadora"
+    }, {
+         "platform": "itunes",
+         "url": "https://itunes.apple.com/app/TemplateLocadora/id123456789"
+       }],
+    "display": "standalone",
+    "lang": "pt-BR",
+    "orientation": "portrait-primary",
+    "scope": "/SkeletonLocadora/"
+}
