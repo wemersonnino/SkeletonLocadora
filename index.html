@@ -19,25 +19,44 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
   <meta name="theme-color" content="#fafafa">
 </head>
 
+<!--[if lt IE 9]>
+<body class="oldie">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]>
 <body>
+<!--<![endif]-->
   <header>
     <section>
-      <span>contato@locadoraproject.com</span>
-      <span>(31) 3333-3333</span>
+      <a class="navbar-brand" href="#"><img src="img/logo-menu.png" /></a>
+      <address>
+        <span>
+         <i class="fa fa-mail-bulk"></i> <a href="mailto:contato@teste.com">  contato@locadoraproject.com</a>
+        </span>
+      </address>
+
+      <span><i class="fa fa-phone"></i> (31) 3333-3333</span>
       <div id="redes-sociais">
-        <span>Face</span>
-        <span>Twitter</span>
-        <span>Insta</span>
+        <span><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a> </span>
+        <span><a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a> </span>
+        <span><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a> </span>
       </div>
     </section>
     <section class="section-menu">
       <div>
-        <h1>Logo</h1>
+        <h1>
+          <img src="img/fitness-abdominal-exercises.svg" title="Locadora Project" id="logo">
+          Locadora Project
+        </h1>
       </div>
       <div>
         <ul>
@@ -49,22 +68,52 @@
           <ul>
             <li><a href="#" title="menu 1">User 1</a> </li>
             <li><a href="#" title="menu 1">User 2</a> </li>
-          </ul>
+          </ul><!--\menu login user-->
         </ul>
       </div>
     </section>
   </header><!--/Topo-->
   <main>
-    <section>
-      <div>
-        <h1>Banner/grafico/etc</h1>
+    <section id="dados-grafico-form">
+      <div id="banner-ou-dados">
+        <img src="img/megabanner.png">
       </div>
-      <div>
-        <p>Form</p>
+      <div id="form-ou-grafico">
+        <h1>Form</h1>
+        <section id="login-social">
+          <div>
+            <img class="" src="img/google-icon.png" title="login google" aria-label="google"/>
+            <p>Google</p>
+          </div>
+          <div><img rel="nofollow" src="img/fb-icon.png">
+            <p>Facebook</p>
+          </div>
+          <div>
+            <i class="fa-brands fa-apple fa-2x"></i>
+            <p>Apple</p>
+          </div>
+        </section><!--/login social-->
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div><!--\input mail-->
+          <div class="mb-3">
+            <label for="pass" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="pass" aria-describedby="passHelp" placeholder="Senha">
+            <div id="passHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div><!--/input pass-->
+          <div id="button-send">
+            <button type="submit" name="form-login" aria-label="login" id="loginForm" class="btn btn-primary">login</button>
+          </div>
+        </form>
       </div>
     </section>
     <section>
       <p>Conteudo</p>
+      <ul id="testList"></ul>
+      <web-Component></web-Component>
     </section>
     <!-- Add your site or application content here -->
     <p>Hello world! This is HTML5 Boilerplate. Teste </p>
@@ -79,7 +128,7 @@
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>

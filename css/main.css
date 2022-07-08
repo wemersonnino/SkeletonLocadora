@@ -92,52 +92,195 @@ body{
   display: flex;
   flex-direction: column;
   font: normal 16px/1.4 sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0 0.187em;
 }
-body section{
-  flex-direction: row;
-}
 header{
-  width: 100%;
-  padding: 1rem 0 1rem 0;
-  margin: 0 auto 1rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-header section{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  margin: 0 auto 1rem auto;
-  padding: 1rem;
-  max-width: 100%;
-  width: 100%;
-}
-header section span{
   display: grid;
-  grid-column: 2 / span 10;
-  align-items: baseline;
-  list-style: none;
-  padding: 0 1rem 2.5rem 1rem;
-  font-size: 1.11em;
+  justify-items: stretch;
+  align-items: end;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-auto-flow: dense;
+}
+header > section{
+  display: inline-grid;
+  grid-column-start: span 3;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  padding: 1rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 #redes-sociais{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
-.section-menu {
-  display: flex;
+#redes-sociais > span{
+  display: inline-flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+}
+.section-menu{
+  display: inline-grid;
+  grid-column-start: span 3;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2,1fr);;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  padding: 1rem 0;
+}
+#logo{
   width: 100%;
 }
-.section-menu ul{
-  list-style: none;
+.section-menu h1{
+  font-size: 1.188em;
+  font-weight: 500;
+  text-align: center;
 }
-.section-menu ul li{
+header > section > div > ul:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  list-style: none;
+  justify-content: space-between;
+  justify-items: baseline;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+header > section > div > ul:nth-child(1) > li{
+  margin: 0 auto 1rem auto;
+}
+header > section > div > ul:nth-child(1) > li > a{
+  text-decoration: none;
+}
+header > section > div > ul:nth-child(1) > li > a:hover{
+  text-decoration: #222222;
+  color: #222222;
+  font-weight: 700;
+  padding: 0;
+}
+#login-social{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+}
+#login-social div{
+  text-align: center;
+}
+#login-social div i{
+
+}
+#login-social div p{
+  font-weight: 300;
+  font-size: 1em;
+}
+#dados-grafico-form{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+#banner-ou-dados{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+#banner-ou-dados > img{
+  width: 100%;
+  max-width: 100%;
+}
+
+#form-ou-grafico{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: #555555 solid 0.1rem;
+  border-radius: 0.5rem;
+}
+#form-ou-grafico h1{
+  font-weight: 500;
+  margin: 0.2rem auto 0 auto;
+}
+#login-social{
+  display: flex;
+  flex-direction: row;
+}
+#login-social div{
   margin: 0 1rem 0 1rem;
+}
+#form-ou-grafico form{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+.mb-3{
+  padding: 0.3rem;
+  width: 100%;
+  max-width: 100%;
+}
+.form-label{
+  font-size: 1em;
+  font-stretch: semi-condensed;
+  font-weight: 400;
+  line-height: 1.722em;
+}
+.form-control{
+  font-weight: 300;
+  border: #555555 solid 0.1em;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+#emailHelp{
+  display: none;
+  font-weight: 400;
+  color: brown;
+  margin: 0.7rem auto;
+  width: 100%;
+}
+#passHelp{
+  display: none;
+  font-weight: 400;
+  color: brown;
+  margin: 0.7rem auto;
+  width: 100%;
+}
+#button-send{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0.7rem 0;
+  margin: 1rem auto 0 auto;
+}
+.btn{
+  border: none;
+  border-radius: 0.3em;
+  padding: 1rem;
+  font-size: 1.000em;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover{
+  background-color: cadetblue;
+  color: cornsilk;
 }
 
 /* ==========================================================================
@@ -230,51 +373,34 @@ header section span{
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
-  header{
-    width: 100%;
-    padding: 1rem 0 1rem 0;
-    margin: 0 auto 1rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  header section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin: 0 auto 1rem auto;
+  header > section{
+    display: inline-grid;
+    grid-column-start: span 3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-items: start;
     padding: 1rem;
-    max-width: 100%;
-    width: 100%;
   }
-  header section span{
-    display: grid;
-    grid-column: 2 / span 10;
+  header > section > div > ul:nth-child(1){
+    display: flex;
+    flex-direction: row;
     align-items: baseline;
     list-style: none;
-    padding: 0 1rem 0 1rem;
-  }
-  #redes-sociais{
-    display: flex;
-    flex-direction: row;
-  }
-  .section-menu {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-  }
-  .section-menu ul{
-    display: flex;
-    align-items: baseline;
-    list-style: none;
-    text-decoration: #222222;
-    flex-direction: row;
-  }
-  .section-menu ul li{
+    justify-items: baseline;
     margin: 0 1rem 0 1rem;
   }
+  header > section > div > ul:nth-child(1) > li{
+    margin: 0 1rem 1rem 1rem;
+  }
+  #dados-grafico-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 0.5rem;
+    padding: 0;
+  }
+
 }
 
 @media print,
