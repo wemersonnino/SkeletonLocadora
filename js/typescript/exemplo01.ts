@@ -21,7 +21,7 @@ const t = new TestWebComponent('Wemerson','Lareira','123');
 t.searchSpaco("Wemerson Moreira Pereira");
 
 for (let i = 0; i < donuts.length; i++) {
-    
+
 }
 
 let list = document.getElementById("testList");
@@ -36,10 +36,13 @@ const fList = (url:string) => {
         a.setAttribute('title',item);
         a.setAttribute('id',String(index));
         p.appendChild(a);
-        list.appendChild(p);
+        if(list != null){
+          list.appendChild(p);
+        }
     });
 }
 fList(urlText);
 
+t.docmentArvore("mudando title");
 
 

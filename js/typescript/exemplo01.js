@@ -32,7 +32,10 @@ var fList = function (url) {
         a.setAttribute('title', item);
         a.setAttribute('id', String(index));
         p.appendChild(a);
-        list.appendChild(p);
+        if (list != null) {
+            list.appendChild(p);
+        }
     });
 };
 fList(urlText);
+t.docmentArvore("mudando title");

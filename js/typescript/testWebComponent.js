@@ -15,6 +15,10 @@ var TestWebComponent = /** @class */ (function () {
         }
         console.log(verificarEspaco.replace(/ /g, "_"));
     };
+    TestWebComponent.prototype.docmentArvore = function (title) {
+        document.title = title;
+        console.log(title);
+    };
     return TestWebComponent;
 }());
 exports["default"] = TestWebComponent;

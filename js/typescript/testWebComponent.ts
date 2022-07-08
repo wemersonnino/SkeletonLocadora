@@ -18,6 +18,11 @@ class TestWebComponent {
 
         console.log(verificarEspaco.replace(/ /g, "_"));
     }
+
+    public docmentArvore(title:string) {
+        document.title = title;
+        console.log(title);
+    }
 }
 
 export default TestWebComponent;
